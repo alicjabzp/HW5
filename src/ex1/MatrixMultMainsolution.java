@@ -12,17 +12,14 @@ public class MatrixMultMainsolution {
         int[][] bTransp = transpose(B);
         if (A[0].length!=B[0].length) return new int[0][0];
         int[][] result = new int [A.length][B[0].length];
-        long start = System.nanoTime();
-        for(int i = 0; i < A.length; i++){
-            for(int j = 0; j < bTransp.length; j++){
-                DotProductThreads current = new DotProductThreads(A[i],bTransp[j]);
+        for(int i = 0; i < A.length; i++) {
+            for (int j = 0; j < bTransp.length; j++) {
+                DotProductThreads current = new DotProductThreads(A[i], bTransp[j]);
                 current.run();
                 //current.start();
                 result[i][j] = current.getDot();
             }
         }
-        long timeNeeded = System.nanoTime() - start;
-        System.out.println(timeNeeded);
         return result;
     }
 
