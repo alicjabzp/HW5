@@ -34,14 +34,14 @@ public class Bruch{
         }
     }
 
-// falsch
+    //falsch
     public void kuerzen(){
         int ggt = ggt(Math.abs(zaehler), Math.abs(nenner));
         this.zaehler *= ggt;
         this.nenner *= ggt;
     }
 
-    //nur hilfsmethode euklidischer algorithmus, hier sind keine fehler
+    //nur hilfsmethode euklidischer Algorithmus, hier sind keine Fehler
     private int ggt(int a, int b) {
         while (b != 0) {
             int temp = b;

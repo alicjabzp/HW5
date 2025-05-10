@@ -1,6 +1,8 @@
 {
-    "java.project.sourcePaths": [
-        "src"
-    ],
-    "java.project.referencedLibraries": []
+    "java.project.referencedLibraries": [
+        "lib/junit-jupiter-api-5.10.0.jar",
+        "lib/junit-jupiter-engine-5.10.0.jar",
+        "lib/junit-platform-launcher-1.10.0.jar",
+        "test-lib/**/*.jar"
+    ]
 }
